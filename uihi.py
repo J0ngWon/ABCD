@@ -1,1 +1,2 @@
-iuhguidasdasd
+while (True):
+    print("test")
