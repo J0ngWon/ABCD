@@ -1,9 +1,9 @@
 import random
 import math
 
-def combination(n, r):
+'''def combination(n, r):
     return math.factorial(n) // (math.factorial(r) * math.factorial(n - r))
-
+'''
 N=int(input())  #카드수 3~10
 M=int(input())  #최대수 10~300
 card=[]
@@ -24,7 +24,7 @@ for k in range(N):
 count=int(0)
 result_card=[]
 card_len=len(card)     
-combination(card_len,3) #총 반복 횟수 조합이용 (nCr)
+'''combination(card_len,3) #총 반복 횟수 조합이용 (nCr)'''
 
 good_card=int(card[0]+card[1]+card[2])
 q=2
@@ -32,14 +32,15 @@ r=1
 
 for i in range(card_len-2):
     for j in range(r,card_len):
-        if card_len==r-1:
-                r+=1
+        if j-1==card_len:
+            j+=1
         for k in range(q,card_len):
             result_card.append(card[i]+card[j]+card[k])
             if abs(M-result_card[count])<=abs(M-good_card):
                 good_card=result_card[count]
            
-            if card_len==q-1:
-                q+=1
+            if k-1==card_len:
+                k+=1
             count+=1
-print('제출값=%d'%(good_card))          
+print('제출값=%d'%(good_card))   
+       
