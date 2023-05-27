@@ -33,14 +33,14 @@ r=1
 for i in range(card_len-2):
     for j in range(r,card_len):
         if j-1==card_len:
-            j+=1
+            r+=1
         for k in range(q,card_len):
             result_card.append(card[i]+card[j]+card[k])
             if abs(M-result_card[count])<=abs(M-good_card):
                 good_card=result_card[count]
            
             if k-1==card_len:
-                k+=1
+                q+=1
             count+=1
 print('제출값=%d'%(good_card))   
        
