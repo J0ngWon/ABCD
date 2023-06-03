@@ -1,8 +1,11 @@
 N, K = map(int, input().split())  
 
+##print('%d %d \n'%(N,K))  
+
+
 gazi = []  
 
-for _ in range(N):
+for x in range(N):
     coin = int(input())
     gazi.append(coin)
 
