@@ -34,6 +34,7 @@ for i in range(card_len-2):
     for j in range(r,card_len):
         if j-1==card_len:
             j+=1
+            
         for k in range(q,card_len):
             result_card.append(card[i]+card[j]+card[k])
             if abs(M-result_card[count])<=abs(M-good_card):
